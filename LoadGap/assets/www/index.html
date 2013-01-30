@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Carnevale Venezia</title>
+   
+   <link rel="stylesheet" href="jqmobile/jquery.mobile-1.2.0.min.css" />
+   
+   <script src="jqmobile/jquery.js"></script>
+   <script src="jqmobile/jquery.mobile-1.2.0.min.js"></script>
+   <script type="text/javascript" src="cordova-2.2.0.js"></script>
+   <script type="text/javascript" src="js/index.js"></script>
+   
+   
+	<script type="text/javascript">
+	$.post("http://www.alfapin.com/carnevale/gap/home.php",  {} , function(data) { $("#homeDiv").html(data); } );
+   </script>
+   
+</head>
+<body>
+
+<div data-role="page">
+
+	<div data-role="header">
+		<h1>Carnevale Venezia</h1>
+	     <img src="img/carnevale.jpg" width="100%" style="margin: 0px" />
+	     
+	     <div data-role="navbar" data-iconpos="top" data-theme="a">
+				<ul>
+					<li><a data-icon="home" href="index.html">Home</a></li>
+					<li><a data-icon="grid" href="partecipa.html">Partecipa</a></li>
+					<li><a data-icon="star" href="vota.html">Vota</a></li>
+				</ul>
+		</div><!-- /navbar -->
+		
+	     
+	</div><!-- /header -->
+    
+
+	<div data-role="content">	
+		
+		<div id="homeDiv"></div>
+		
+		<input type="hidden" id="uuid" name="uuid" >
+				
+	</div><!-- /content -->
+
+</div><!-- /page -->
+
+
+</body>
+</html>
